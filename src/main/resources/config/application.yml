@@ -1,0 +1,40 @@
+# Embed Tomcat 컨테이너 설정
+server:
+  port: 8080
+  context-path: /
+#  tomcat:
+#    basedir: /../..
+
+spring:
+  # Jsp View Resolver 설정
+  mvc:
+    view:
+      prefix: /WEB-INF/views/pages/
+      suffix: .jsp
+
+  # HTTP 요청 인코딩 설정
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  freemarker:
+    prefer-file-system-access:
+
+# Logging - 로그레벨 설정 TRACE < DEBUG < INFO <  WARN < ERROR < OFF
+# 로그레벨 참고 : https://logback.qos.ch/manual/architecture.html
+logging:
+  level:
+    ROOT: DEBUG
+    org.springframework.web: DEBUG
+    org.apache: ERROR
+    org.hibernate: ERROR
+#    pe.dualcat.invention.ui: DEBUG
+
+
+#spring:
+#  profiles: dev
+#invention:
+#  resource:
+#    location:
+#      js: file:///C:/web/
+#      css: file:///C:/web/

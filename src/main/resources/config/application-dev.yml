@@ -1,0 +1,18 @@
+# 개발환경 설정 프로퍼티
+server:
+  port: 8090
+spring:
+  # Boot 개발 시 소스 Hot swapping을 위한 라이브러리 (spring-devtools) 설정
+  devtools:
+    restart:
+#      additional-paths: .
+      exclude: /js/**
+#      additional-paths: .
+#      additional-exclude: js/**
+    livereload:
+      enabled: true
+
+resourceLocations:
+  js: file:///C:\Workspace\board\src\main\webapp\js/
+  css: file:///C:\Workspace\board\src\main\webapp\js/
+  images: file:///C:\Workspace\board\src\main\webapp\js/
